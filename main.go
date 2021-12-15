@@ -21,6 +21,7 @@ var static embed.FS
 func main() {
 	cnt := 5000000000
 	rand.Seed(time.Now().UnixNano())
+	// file を読み取ります
 	b1, err := fs.ReadFile(static, "topic.txt")
 	if err != nil {
 		panic(err)
@@ -28,17 +29,26 @@ func main() {
 	arr01 := strings.Split(string(b1), "\n")
 	for _, s := range arr01 {
 		if s != "" {
-			fmt.Printf(" \r TOPICS: %s\n", s)
+			fmt.Printf(" \r Topics: %s\n", s)
 		}
 	}
+	// 改行後の1行が含まれるので-1
+	arr1_len := len(arr01) - 1
+	// 文字列をoverwrite するためのスペース
+	space_str := "                                                                                       "
+	// Loading 描写のfor {}
 	for i := 1; i <= cnt; i++ {
 		if i%(cnt/100) == 0 {
 			p := i / (cnt / 100)
-			fmt.Printf("\r Loading: %s ", mark(p))
+			topic_title := string(arr01[rand.Intn(arr1_len)])
+			time.Sleep(300)
+			fmt.Printf("\r Loading: %s %s %s", mark(p), topic_title, space_str)
 		}
 	}
-	arr1_len := len(arr01) - 1
+	// 終了処理
+	fmt.Printf("\r Loading: %s %s", space_str, space_str)
+	emojiU := "\U0001f389"
 	topic_title := string(arr01[rand.Intn(arr1_len)])
-	fmt.Println("\n 🏁",topic_title)
+	fmt.Printf("\n %s: %s \n", emojiU, topic_title)
 	fmt.Println(" Done.")
 }
