@@ -29,26 +29,29 @@ func main() {
 	arr01 := strings.Split(string(b1), "\n")
 	for _, s := range arr01 {
 		if s != "" {
-			fmt.Printf(" \r Topics: %s\n", s)
+			time.Sleep(time.Millisecond * 55)
+			fmt.Printf(" \r Topics : %s\n", s)
 		}
 	}
 	// 改行後の1行が含まれるので-1
 	arr1_len := len(arr01) - 1
 	// 文字列をoverwrite するためのスペース
-	space_str := "                                                                                       "
+	space_str := "                                                                                          "
 	// Loading 描写のfor {}
 	for i := 1; i <= cnt; i++ {
 		if i%(cnt/100) == 0 {
 			p := i / (cnt / 100)
 			topic_title := string(arr01[rand.Intn(arr1_len)])
-			time.Sleep(300)
+			time.Sleep(time.Millisecond * 13)
 			fmt.Printf("\r Loading: %s %s %s", mark(p), topic_title, space_str)
 		}
 	}
 	// 終了処理
-	fmt.Printf("\r Loading: %s %s", space_str, space_str)
-	emojiU := "\U0001f389"
+	fmt.Printf("\r Loading: %s", space_str)
+	time.Sleep(time.Millisecond * 600)
+	emojiU := "\U0001f389\U0001f389\U0001f389"
 	topic_title := string(arr01[rand.Intn(arr1_len)])
-	fmt.Printf("\n %s: %s \n", emojiU, topic_title)
-	fmt.Println(" Done.")
+	fmt.Printf("\n %s : %s \n", emojiU, topic_title)
+	time.Sleep(time.Millisecond * 1000)
+	fmt.Println(" Done.  : repo https://github.com/nwiizo/SRETT2021SP")
 }
