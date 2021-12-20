@@ -1,1 +1,2 @@
 # SRETT2021SP
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Toil の削減というのはこういうことですよね？ <a href="https://twitter.com/hashtag/SRETT?src=hash&amp;ref_src=twsrc%5Etfw">#SRETT</a> <a href="https://t.co/FBlmRijXqS">pic.twitter.com/FBlmRijXqS</a></p>&mdash; nwiizo (@nwiizo) <a href="https://twitter.com/nwiizo/status/1471157909862387714?ref_src=twsrc%5Etfw">December 15, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
