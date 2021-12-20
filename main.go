@@ -36,7 +36,7 @@ func main() {
 	// 改行後の1行が含まれるので-1
 	arr1_len := len(arr01) - 1
 	// 文字列をoverwrite するためのスペース
-	space_str := "                                                                                          "
+	space_str := "                                                                                            "
 	// Loading 描写のfor {}
 	for i := 1; i <= cnt; i++ {
 		if i%(cnt/100) == 0 {
